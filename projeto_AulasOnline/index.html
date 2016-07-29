@@ -1,0 +1,95 @@
+﻿<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AuLink</title>
+		<link rel="stylesheet" type="text/css" href="style/styleInicial.css">
+		<script>
+			function atvCad(){
+				var nome = document.getElementById("nome");
+					if(nome.value==""){
+						alert("Preencha o campo nome!");
+						nome.focus ;
+						return false ;
+					}
+				var senha = document.getElementById("senha");
+					if(senha.value==""){
+						alert("Preencha o campo senha!");
+						senha.focus ;
+						return false ;
+					}
+			
+				var email = document.getElementById("email");			
+					if(email.value==""){
+						alert("Preencha o campo email!");
+						email.focus ;
+						return false ;
+					}
+				alert("Cadastro realizado com sucesso!");
+			}
+			
+			function verificarLoginSenha(){
+			
+				var login = document.getElementById("login");
+				var senha = document.getElementById("senhaLogin");
+				
+				if(login.value==""){
+					alert("É nescessário colocar o Login");
+					return false;
+			}
+				if(senha.value==""){
+					alert("Digite sua senha");
+					return false;
+				}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div id="pagina">
+			<img src="style/logo.png" id="logo">
+			
+			<div id="logon">
+				<form action="login.php" method="POST">
+					<label><b>Login</b></label><label id="senhaNome"><b>Senha</b></label><br>
+					<input type="text" name="login" id="login">
+					<input type="password" name="senhaLogin" id="senhaLogin">
+					<input type="submit" name="entrar" value="Entrar" onclick="return verificarLoginSenha();">
+				</form>
+				<label id="recuSenha"><a href="">Esqueceu a senha?</a></label> 	
+			</div>
+			<div id="form">
+				<form action="login.php" method="POST">
+					<fieldset><legend><h3>Cadastre-se!</h3></legend>
+						<table>
+							<tr>
+								<td><label>Nome</label></td> <td><input type="text" name="nome" id="nome" size=30px></td>
+							</tr>
+							<tr>
+								<td><label>Sobrenome</label> <td><input type="text" name="sobrenome" id="sobrenome" size=30px></td>
+							</tr>
+							<tr>
+								<td><label>Senha</label></td> <td><input type="password" name="senha" id="senha" maxlength=12 minlength=8></td>
+							</tr>
+							<tr>
+								<td><label>Sexo </label></td>
+									<td><label><i>Masculino</i></label><input type="radio" name="sexo" id="M">
+										<label><i>Femenino</i></label> <input type="radio" name="sexo" id="F"></td>
+							<tr>
+								<td><label>Nascimento</label></td> <td><input type="date" name="nascimento" id="nascimento"></td>
+							</tr>
+							<tr>	
+								<td><label>E-mail</label></td> <td><input type="text" name="email" id="email" size=30px></td>
+							</tr>
+						</table><br>
+						<input type="submit" name="enviar" value="Cadastrar" onclick="return atvCad();">
+					</fieldset>
+				</form>
+			</div>
+			<div id="esquerdo">
+				<h2 id="jargao">Sua rede mundial de estudos</h2>
+				<img src="style/img1.jpg" height=250px>
+			</div>
+		</div>
+	</body>
+</html>
