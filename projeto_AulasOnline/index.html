@@ -25,7 +25,7 @@
 						email.focus ;
 						return false ;
 					}
-				alert("Cadastro realizado com sucesso!");
+			
 			}
 			
 			function verificarLoginSenha(){
@@ -59,27 +59,27 @@
 				<label id="recuSenha"><a href="">Esqueceu a senha?</a></label> 	
 			</div>
 			<div id="form">
-				<form action="login.php" method="POST">
+				<form action="cadastro.php" method="POST">
 					<fieldset><legend><h3>Cadastre-se!</h3></legend>
 						<table>
 							<tr>
-								<td><label>Nome</label></td> <td><input type="text" name="nome" id="nome" size=30px></td>
+								<td><label>Nome*</label></td> <td><input type="text" name="nome" id="nome" size=30px></td>
 							</tr>
 							<tr>
-								<td><label>Sobrenome</label> <td><input type="text" name="sobrenome" id="sobrenome" size=30px></td>
+								<td><label>Login*</label> <td><input type="text" name="usuario" id="usuario" size=30px maxlength=20 minlength=5></td>
 							</tr>
 							<tr>
-								<td><label>Senha</label></td> <td><input type="password" name="senha" id="senha" maxlength=12 minlength=8></td>
+								<td><label>Senha*</label></td> <td><input type="password" name="senha" id="senha" maxlength=12 minlength=8></td>
 							</tr>
 							<tr>
 								<td><label>Sexo </label></td>
-									<td><label><i>Masculino</i></label><input type="radio" name="sexo" id="M">
-										<label><i>Femenino</i></label> <input type="radio" name="sexo" id="F"></td>
+									<td><label><i>Masculino</i></label><input type="radio" name="sexo" id="M" value="M">
+										<label><i>Femenino</i></label> <input type="radio" name="sexo" id="F" value="F"></td>
 							<tr>
 								<td><label>Nascimento</label></td> <td><input type="date" name="nascimento" id="nascimento"></td>
 							</tr>
 							<tr>	
-								<td><label>E-mail</label></td> <td><input type="text" name="email" id="email" size=30px></td>
+								<td><label>E-mail*</label></td> <td><input type="text" name="email" id="email" size=30px></td>
 							</tr>
 						</table><br>
 						<input type="submit" name="enviar" value="Cadastrar" onclick="return atvCad();">
