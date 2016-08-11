@@ -1,0 +1,31 @@
+@charset="utf-8" ;
+
+#topo{
+	font-family: "arial", sans-serif;
+	padding-bottom:10px;
+	padding-left:10px;
+	padding-right:15%;
+	padding-top:10px;
+	
+}
+
+fieldset{
+	background-color: lightgrey;
+	margin-top:10%;
+	margin-right: 120px;
+	margin-left: 120px;
+}
+
+label,h3{
+	color:grey;
+	font-size:20px;
+	font-family:comics, sans-serif;
+}
+
+body{
+	background-image: url("fundo.png");
+	background-repeat: no-repeat;
+	background-attachment:scroll;
+	background-position: top right;
+	background-size: cover;
+}
