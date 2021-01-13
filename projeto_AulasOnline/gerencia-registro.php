@@ -6,7 +6,8 @@
 	}
 	
 	try{
-		$stmt = $conexao->prepare("insert into usuarios(nome, email, ddd, telefone, endereco, cidade, estado, bairro, pais, login, senha, news, sexo, nascimento) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		$stmt = $conexao->prepare("insert into usuarios(nome, email, ddd, telefone, endereco, cidade, estado, bairro, pais, login, senha, news, sexo, nascimento) 
+		values(?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 
 		$nome= $_POST ["nome"];
 		$email= $_POST ["email"];
